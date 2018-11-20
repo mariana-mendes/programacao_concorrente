@@ -2,30 +2,23 @@ package questao_2;
 
 public class HTTPRequest implements HTTPRequestI{
 	
-	private String server;
+	private String data;
 
 	public HTTPRequest() {
-		this.server = "None";
+		this.data = "Conteúdo da requisição";
 	}
 
 	@Override
 	public String request(String serverName) {
-		this.setServer(serverName);
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String reliableRequest() {
-		return this.getServer();
+		return serverName + " retornou: " + data;
 	}
 	
-	public String getServer() {
-		return server;
+	public String getData() {
+		return data;
 	}
 
-	public void setServer(String server) {
-		this.server = server;
+	public void setData(String server) {
+		this.data = server;
 	}
 
 }
