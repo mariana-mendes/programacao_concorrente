@@ -5,7 +5,7 @@ public class HTTPRequest implements HTTPRequestI{
 	private String data;
 
 	public HTTPRequest() {
-		this.data = "Conteúdo da requisição";
+		this.data = "ConteÃºdo da requisiÃ§Ã£o";
 	}
 
 	@Override
