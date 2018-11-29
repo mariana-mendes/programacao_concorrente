@@ -3,7 +3,8 @@ package questao_2;
 public class HTTPRequest implements HTTPRequestI{
 	
 	private String data;
-
+	private String serverName;
+	
 	public HTTPRequest() {
 		this.data = "Conteúdo da requisição";
 	}
@@ -20,5 +21,8 @@ public class HTTPRequest implements HTTPRequestI{
 	public void setData(String server) {
 		this.data = server;
 	}
+
+
+
 
 }
