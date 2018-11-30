@@ -8,17 +8,14 @@ public class Main {
 	static Server m1;
 	static Server m2;
 	static Server m3;
+	static final String STRING_VAZIA ="";
 	
 	public static void main(String[] args) throws InterruptedException {
-
-		
-		for (int i = 0; i < 20; i++) {
 			lt = new CountDownLatch(1);
-			m1 = new Server("mirror1.com", lt);
-			m2 = new Server("mirror2.br", lt);
-			m3 = new Server("mirror3.edu", lt);
-			reliableRequest();
-		}
+			m1 = new Server("mirror1.com", lt, STRING_VAZIA);
+			m2 = new Server("mirror2.br", lt, STRING_VAZIA);
+			m3 = new Server("mirror3.edu", lt, STRING_VAZIA);
+			System.out.println(reliableRequest());
 	}
 
 	public static String reliableRequest() throws InterruptedException {
@@ -29,13 +26,10 @@ public class Main {
 		a.start();
 		b.start();
 		c.start();
-		
 		lt.await();
 		
-		return "";
-		
-		
-
+		String retorno = String.join(m1.getServer(), m2.getServer(), m3.getServer());
+		return retorno;
 	}
 
 }
