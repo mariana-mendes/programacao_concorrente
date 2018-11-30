@@ -1,4 +1,4 @@
-package questao_2;
+package questao_3;
 
 import java.util.concurrent.CountDownLatch;
 
