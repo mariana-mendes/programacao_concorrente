@@ -16,6 +16,7 @@ public class Main {
 			m2 = new Server("mirror2.br", lt, STRING_VAZIA);
 			m3 = new Server("mirror3.edu", lt, STRING_VAZIA);
 			System.out.println(reliableRequest());
+			
 	}
 
 	public static String reliableRequest() throws InterruptedException {
@@ -26,6 +27,7 @@ public class Main {
 		a.start();
 		b.start();
 		c.start();
+	
 		lt.await();
 		
 		String retorno = String.join(m1.getServer(), m2.getServer(), m3.getServer());
