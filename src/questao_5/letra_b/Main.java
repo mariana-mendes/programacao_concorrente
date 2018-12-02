@@ -1,4 +1,4 @@
-package questao_5;
+package questao_5.letra_b;
 
 import java.util.concurrent.*;
 import java.util.*;

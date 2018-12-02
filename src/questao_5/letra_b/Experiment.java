@@ -1,4 +1,4 @@
-package questao_5;
+package questao_5.letra_b;
 
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
