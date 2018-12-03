@@ -17,9 +17,9 @@ public class Server implements Runnable {
 	 * @param countDownLatch
 	 *            latch usado para controlar os 3 servidores (threads)
 	 * @param arrivedFirst
-	 *            será uma string vazia se o servidor não for o que tiver feito a
-	 *            requisição ou será uma string com o nome do servidor se o mesmo
-	 *            tiver feito a requisição.
+	 *            serï¿½ uma string vazia se o servidor nï¿½o for o que tiver feito a
+	 *            requisiï¿½ï¿½o ou serï¿½ uma string com o nome do servidor se o mesmo
+	 *            tiver feito a requisiï¿½ï¿½o.
 	 */
 	public Server(String serverName, CountDownLatch countDownLatch, String arrivedFirst) {
 		this.serverName = serverName;
