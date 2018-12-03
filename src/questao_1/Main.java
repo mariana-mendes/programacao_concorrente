@@ -9,7 +9,7 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
 		i = 0;
-		canal = new Canal(1);
+		canal = new Canal(5);
 		Thread t1 = new Thread(produces);
 		Thread t2 = new Thread(consumes);
 		t2.start();
@@ -21,10 +21,10 @@ public class Main {
 	}
 
 	private static Runnable consumes = new Runnable() {
-		public void run() {
+		public synchronized void run() {
 			while (true) {
 				try {
-					Thread.sleep(new Random().nextInt(1000));
+					Thread.sleep(new Random().nextInt(2000));
 					System.out.println("Consome " + canal.takeMessage());
 				} catch (InterruptedException e) {
 					e.printStackTrace();
@@ -38,7 +38,7 @@ public class Main {
 		public synchronized void run() {
 			while (true) {
 				try {
-					Thread.sleep(new Random().nextInt(1000));
+					Thread.sleep(new Random().nextInt(2000));
 					System.out.println("Produz " + i);
 					canal.putMessage("Mensagem de número " + i);
 					i++;
