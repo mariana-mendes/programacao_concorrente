@@ -17,20 +17,20 @@ public class Server implements Runnable {
 	 * @param countDownLatch
 	 *            latch usado para controlar os 3 servidores (threads)
 	 * @param arrivedFirst
-	 *            será uma string vazia se o servidor não for o que tiver feito a
-	 *            requisição ou será uma string com o nome do servidor se o mesmo
-	 *            tiver feito a requisição.
+	 *            sera uma string vazia se o servidor nao for o que tiver feito a
+	 *            requisicao ou uma string com o nome do servidor se o mesmo
+	 *            tiver feito a requisicao.
 	 */
 	public Server(String serverName, CountDownLatch countDownLatch, String arrivedFirst) {
 		this.serverName = serverName;
 		this.countDownLatch = countDownLatch;
-		this.arrivedFirst = "";
+		this.arrivedFirst = arrivedFirst;
 	}
  
 	@Override
 	public void run() {
 		try {
-			Thread.sleep(10);
+			Thread.sleep(100);
 			synchronized (countDownLatch) {
 				if (countDownLatch.getCount() > 0) {
 					this.setServer(http.request(serverName));
