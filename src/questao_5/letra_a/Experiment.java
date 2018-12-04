@@ -28,7 +28,7 @@ public class Experiment {
         	syncResultPut.add(testMap(syncMap, nThreads)); 
         	concurrentMapResultPut.add(testMap(concurrent, nThreads));
         	syncResultGet.add(testMapGet(syncMap, nThreads));
-        	concurrentMapResultGet.add(testMap(concurrent, nThreads));
+        	concurrentMapResultGet.add(testMapGet(concurrent, nThreads));
         	numOfThreads.add(nThreads);
             nThreads*=2;
         }
