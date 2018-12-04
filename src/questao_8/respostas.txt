@@ -1,0 +1,12 @@
+LETRA A: 
+	O semáforo deve iniciar com valor 1, pois quando uma thread for acessar a Região
+	Crítica pela primeira vez, executará o wait(S), decrementando o valor.
+	Se o valor do semáforo for 0 significa que a região crítica está sendo acessada.
+
+LETRA B:
+	O número de threads será 13, pois para que a região crítica seja bloqueada o semáforo
+	precisa ser decrementado 13 vezes. Como as threads são acordados aleatoriamente, então o resultado
+	do programa não será o mesmo sempre, mas nunca mais de 13 threads acessaram a região crítica ao mesmo tempo.
+
+LETRA C:
+	
