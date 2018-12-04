@@ -9,8 +9,8 @@ LETRA B:
 	do programa não será o mesmo sempre, mas nunca mais de 13 threads acessaram a região crítica ao mesmo tempo.
 
 LETRA C:
-	i) Se ambos começarem com 1, ambos podem acessar a região crítica inicialmente, após um terminar sua tarefa, ele dorme e libera a 	  região.
-	ii) Apenas aquele que iniciar com 1 pode acessar a região crítica, após ele liberar a região, o outro vai usar. Desta forma os 		semáforos vão revezar o acesso à região crítica sem tentativa de acesso simultâneo.
+	i) Se ambos começarem com 1, ambos podem acessar a região crítica inicialmente, após um terminar sua tarefa, ele dorme e libera a  região.
+	ii) Apenas aquele que iniciar com 1 pode acessar a região crítica, após ele liberar a região, o outro vai usar. Desta forma os 	semáforos vão revezar o acesso à região crítica sem tentativa de acesso simultâneo.
 	iii) Se ambos começarem em 0, eles irão dormir e nenhum irá rodar, ficando sem acesso a região crítica.
 
 LETRA D:
