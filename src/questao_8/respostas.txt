@@ -1,12 +1,17 @@
 LETRA A: 
-	O sem�foro deve iniciar com valor 1, pois quando uma thread for acessar a Regi�o
-	Cr�tica pela primeira vez, executar� o wait(S), decrementando o valor.
-	Se o valor do sem�foro for 0 significa que a regi�o cr�tica est� sendo acessada.
+	O semáforo deve iniciar com valor 1, pois quando uma thread for acessar a Região
+	Crítica pela primeira vez, executará o wait(S), decrementando o valor.
+	Se o valor do semáforo for 0 significa que a região crítica está sendo acessada.
 
 LETRA B:
-	O n�mero de threads ser� 13, pois para que a regi�o cr�tica seja bloqueada o sem�foro
-	precisa ser decrementado 13 vezes. Como as threads s�o acordados aleatoriamente, ent�o o resultado
-	do programa n�o ser� o mesmo sempre, mas nunca mais de 13 threads acessaram a regi�o cr�tica ao mesmo tempo.
+	O número de threads será 13, pois para que a região crítica seja bloqueada o semáforo
+	precisa ser decrementado 13 vezes. Como as threads são acordados aleatoriamente, então o resultado
+	do programa não será o mesmo sempre, mas nunca mais de 13 threads acessaram a região crítica ao mesmo tempo.
 
 LETRA C:
-	
+	i) Se ambos começarem com 1, ambos podem acessar a região crítica inicialmente, após um terminar sua tarefa, ele dorme e libera a 	  região.
+	ii) Apenas aquele que iniciar com 1 pode acessar a região crítica, após ele liberar a região, o outro vai usar. Desta forma os 		semáforos vão revezar o acesso à região crítica sem tentativa de acesso simultâneo.
+	!!!) Se ambos começarem em 0, eles irão dormir e nenhum irá rodar, ficando sem acesso a região crítica.
+
+LETRA D:
+	DEADLOCK
